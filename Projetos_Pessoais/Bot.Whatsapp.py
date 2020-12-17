@@ -3,7 +3,11 @@ import time
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.keys import Keys
 
-contatos = ['Helena']
+contatos = []
+
+quantidade_contatos = int(input('Quantos contatos receberão as mensagens? '))
+for i in range(quantidade_contatos):
+    contatos.append(str(input('Insira o nome exato do contato: ')))
 #Nome dos Grupos/Contatos desejados devem estar identicos a no seu Whatsapp
 mensagem = str(input(':'))
 #Você pode trocar esse input por uma str ou até uma proporção matemática 
@@ -32,5 +36,5 @@ def enviar_mensagem(mensagem):
 
 for contato in contatos:
     buscar_contato(contato)
-    for i in range(2000):
+    for i in range(200):
         enviar_mensagem(2 ** i)
