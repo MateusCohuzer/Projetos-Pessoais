@@ -2,7 +2,7 @@
 import pyfiglet 
 import sys 
 import socket 
-from datetime import datetime 
+from datetime import datetime
 
 target = 'bancocn.com'
 
